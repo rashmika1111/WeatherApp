@@ -1,4 +1,4 @@
-// src/api/weatherService.js
+
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY || process.env.ApiKey;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
@@ -21,7 +21,7 @@ export const fetchWeatherByCityId = async (cityId) => {
   }
 };
 
-// Function to fetch weather for multiple cities
+// Fuction to fetch weather for multiple cities
 export const fetchWeatherForCities = async (cityIds) => {
   try {
     const weatherPromises = cityIds.map(id => fetchWeatherByCityId(id));
@@ -39,7 +39,7 @@ export const fetchWeatherForCities = async (cityIds) => {
   }
 };
 
-// Function to transform API data to match our component structure
+// Function to transform api data to match abov component structure
 export const transformWeatherData = (apiData) => {
   return {
     CityCode: apiData.id.toString(),
